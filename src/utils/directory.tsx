@@ -1,10 +1,11 @@
-import { Home, User, Briefcase, Award, Mail } from "lucide-react";
+import { Home, User, Briefcase, Award, Mail, BarChart3 } from "lucide-react";
 import { Tab } from "@/contexts/TabContext";
 
 export const navItems: Tab[] = [
   { name: "Home", path: "/", extension: "js", icon: Home },
   { name: "About", path: "/about", extension: "js", icon: User },
   { name: "Portfolio", path: "/portfolio", extension: "js", icon: Briefcase },
+  { name: "Data Visualizations", path: "/data-visualizations", extension: "tsx", icon: BarChart3 },
   { name: "Certifications", path: "/certifications", extension: "tsx", icon: Award },
   { name: "Contact", path: "/contact", extension: "md", icon: Mail },
 ];

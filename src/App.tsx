@@ -9,6 +9,7 @@ import { navItems } from "./utils/directory";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import DataVisualizations from "./pages/DataVisualizations";
 import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => {
               <Route path="/" element={<Layout><Home /></Layout>} />
               <Route path="/about" element={<Layout><About /></Layout>} />
               <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
+              <Route path="/data-visualizations" element={<Layout><DataVisualizations /></Layout>} />
               <Route path="/certifications" element={<Layout><Certifications /></Layout>} />
               <Route path="/contact" element={<Layout><Contact /></Layout>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

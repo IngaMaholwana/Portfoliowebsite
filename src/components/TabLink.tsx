@@ -1,17 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import useTabContext from '@/hooks/useTabContext';
+import { Tab } from '@/contexts/TabContext';
 
 interface TabLinkProps {
-  to: string;
+  tab?: Tab;
+  to?: string;
   className?: string;
   children: React.ReactNode;
 }
 
-function TabLink({ to, className, children }: TabLinkProps) {
+function TabLink({ tab, to, className, children }: TabLinkProps) {
+  const tabs = useTabContext();
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (tab) {
+      tabs.addTab(tab);
+    }
+  };
+
   return (
-    <Link to={to} className={className}>
+    <a href={to || tab?.path || '#'} onClick={handleClick} className={className}>
       {children}
-    </Link>
+    </a>
   );
 }
 

@@ -1,20 +1,24 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, User, Briefcase, Award, Mail, Menu, X, FileText } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import JSConfetti from 'js-confetti';
-
-const navItems = [
-  { path: "/", label: "Home.tsx", icon: Home },
-  { path: "/about", label: "About.tsx", icon: User },
-  { path: "/portfolio", label: "Portfolio.tsx", icon: Briefcase },
-  { path: "/certifications", label: "Certifications.tsx", icon: Award },
-  { path: "/contact", label: "Contact.tsx", icon: Mail },
-];
+import TabBar from "./tabs/TabBar";
+import useTabContext from "@/hooks/useTabContext";
+import { navItems } from "@/utils/directory";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
+  const tabs = useTabContext();
   const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  // Add current page to tabs when location changes
+  useEffect(() => {
+    const currentNav = navItems.find(item => item.path === location.pathname);
+    if (currentNav) {
+      tabs.addTab(currentNav);
+    }
+  }, [location.pathname]);
 
   // Easter egg: Ctrl+Shift+K for fireworks!
   useEffect(() => {
@@ -40,20 +44,23 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Top Bar */}
-      <header className="h-12 bg-sidebar border-b border-sidebar-border flex items-center px-4 gap-4">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="text-sidebar-foreground hover:bg-sidebar-accent"
-        >
-          {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </Button>
-        <div className="flex items-center gap-2">
-          <FileText className="h-5 w-5 text-primary" />
-          <span className="font-semibold text-foreground">Inga Maholwana</span>
+      {/* Top Bar with Tabs */}
+      <header className="bg-sidebar border-b border-sidebar-border">
+        <div className="h-12 flex items-center px-4 gap-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="text-sidebar-foreground hover:bg-sidebar-accent"
+          >
+            {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
+          <div className="flex items-center gap-2">
+            <FileText className="h-5 w-5 text-primary" />
+            <span className="font-semibold text-foreground">Inga Maholwana</span>
+          </div>
         </div>
+        <TabBar />
       </header>
 
       <div className="flex flex-1 overflow-hidden">
@@ -84,18 +91,18 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                         const Icon = item.icon;
                         const isActive = location.pathname === item.path;
                         return (
-                          <Link
+                          <button
                             key={item.path}
-                            to={item.path}
-                            className={`flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
+                            onClick={() => tabs.addTab(item)}
+                            className={`w-full flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
                               isActive
                                 ? "bg-sidebar-accent text-primary"
                                 : "text-sidebar-foreground hover:bg-sidebar-accent/50"
                             }`}
                           >
                             <Icon className="h-4 w-4" />
-                            <span>{item.label}</span>
-                          </Link>
+                            <span>{item.name}.{item.extension}</span>
+                          </button>
                         );
                       })}
                     </nav>

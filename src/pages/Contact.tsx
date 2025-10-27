@@ -2,7 +2,41 @@ import MarkdownHeader from '@/components/MarkdownHeader';
 import LineBreak from '@/components/LineBreak';
 import Section from '@/components/Section';
 import Text from '@/components/Text';
-import Link from '@/components/Link';
+import { Button } from '@/components/ui/button';
+import { Mail, Github, Linkedin, FileText, BarChart3, Figma } from 'lucide-react';
+
+const contactLinks = [
+  {
+    name: 'Email',
+    href: 'mailto:ingamaholwana@gmail.com',
+    icon: Mail,
+  },
+  {
+    name: 'Github',
+    href: 'https://github.com/IngaMaholwana',
+    icon: Github,
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/inga-maholwana/',
+    icon: Linkedin,
+  },
+  {
+    name: 'Medium',
+    href: 'https://medium.com/@ingamaholwana',
+    icon: FileText,
+  },
+  {
+    name: 'Public Tableau',
+    href: 'https://public.tableau.com/app/profile/inga.maholwana/vizzes',
+    icon: BarChart3,
+  },
+  {
+    name: 'Figma',
+    href: 'https://www.figma.com/@ingamaholwana',
+    icon: Figma,
+  },
+];
 
 const Contact = () => {
   return (
@@ -15,25 +49,22 @@ const Contact = () => {
         </Text>
       </Section>
 
-      <Section>
-        <Text className="text-lg">
-          [<span className="text-pink">Email</span>] (<Link targetBlank href="mailto:ingamaholwana@gmail.com">mailto:ingamaholwana@gmail.com</Link>)
-        </Text>
-        <Text className="text-lg">
-          [<span className="text-pink">Github</span>] (<Link targetBlank href="https://github.com/IngaMaholwana">https://github.com/IngaMaholwana</Link>)
-        </Text>
-        <Text className="text-lg">
-          [<span className="text-pink">LinkedIn</span>] (<Link targetBlank href="https://www.linkedin.com/in/inga-maholwana/">https://www.linkedin.com/in/inga-maholwana/</Link>)
-        </Text>
-        <Text className="text-lg">
-          [<span className="text-pink">Medium</span>] (<Link targetBlank href="https://medium.com/@ingamaholwana">https://medium.com/@ingamaholwana</Link>)
-        </Text>
-        <Text className="text-lg">
-          [<span className="text-pink">Public Tableau</span>] (<Link targetBlank href="https://public.tableau.com/app/profile/inga.maholwana/vizzes">https://public.tableau.com/app/profile/inga.maholwana/vizzes</Link>)
-        </Text>
-        <Text className="text-lg">
-          [<span className="text-pink">Figma</span>] (<Link targetBlank href="https://www.figma.com/@ingamaholwana">https://www.figma.com/@ingamaholwana</Link>)
-        </Text>
+      <Section className="space-y-3">
+        {contactLinks.map((link) => {
+          const Icon = link.icon;
+          return (
+            <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="w-full justify-start gap-3 hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_rgba(var(--primary),0.3)] transition-all duration-300"
+              >
+                <Icon className="h-5 w-5" />
+                {link.name}
+              </Button>
+            </a>
+          );
+        })}
       </Section>
     </div>
   );

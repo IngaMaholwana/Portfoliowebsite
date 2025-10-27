@@ -6,6 +6,7 @@ import JSConfetti from 'js-confetti';
 import TabBar from "./tabs/TabBar";
 import useTabContext from "@/hooks/useTabContext";
 import { navItems } from "@/utils/directory";
+import WelcomeScreen from "./WelcomeScreen";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
@@ -115,9 +116,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
         {/* Main Content */}
         <main className="flex-1 overflow-y-auto">
-          <div className="max-w-6xl mx-auto p-8">
-            {children}
-          </div>
+          {tabs.tabList.length === 0 ? (
+            <WelcomeScreen />
+          ) : (
+            <div className="max-w-6xl mx-auto p-8">
+              {children}
+            </div>
+          )}
         </main>
       </div>
 

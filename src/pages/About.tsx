@@ -22,7 +22,7 @@ const About = () => {
       </Section>
 
       <Section>
-        <MarkdownButton as="a" href="#" target="_blank" rel="noreferrer">
+        <MarkdownButton as="a" href="/documents/Maholwana_Inga_Resume.pdf" target="_blank" rel="noreferrer">
           [Download Resume]
         </MarkdownButton>
       </Section>

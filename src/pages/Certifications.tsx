@@ -4,27 +4,19 @@ import { Award, Download, ExternalLink, FileText } from "lucide-react";
 
 const certifications = [
   {
-    title: "CompTIA Security+",
+    title: "CompTIA Data+",
     issuer: "CompTIA",
     date: "2024",
-    credlyUrl: "#",
-    pdfUrl: "#",
-    description: "Security principles, threat detection, and risk management",
+    credlyUrl: "https://www.credly.com/badges/your-badge-id",
+    pdfUrl: "/documents/CompTIA_Data_ce_certificate.pdf",
+    description: "Data analysis, visualization, and statistical fundamentals",
   },
   {
-    title: "CompTIA Network+",
-    issuer: "CompTIA",
-    date: "2023",
-    credlyUrl: "#",
-    pdfUrl: "#",
-    description: "Networking concepts, infrastructure, and operations",
-  },
-  {
-    title: "Bachelor's Diploma in Computer Science",
-    issuer: "University",
-    date: "2022",
-    pdfUrl: "#",
-    description: "Comprehensive software development and computer science fundamentals",
+    title: "FNB App Academy Fullstack Development",
+    issuer: "FNB App Academy",
+    date: "2025",
+    pdfUrl: "/documents/FNB_App_Academy_Fullstack_Certificate.pdf",
+    description: "Comprehensive fullstack software development certification",
   },
 ];
 

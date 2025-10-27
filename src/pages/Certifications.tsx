@@ -4,10 +4,24 @@ import { Award, Download, ExternalLink, FileText } from "lucide-react";
 
 const certifications = [
   {
+    title: "Google Cybersecurity Professional Certificate",
+    issuer: "Coursera",
+    date: "April 2025",
+    credlyUrl: "https://www.credly.com/users/inga-maholwana.e3378d19",
+    description: "Foundational cybersecurity tactics including Python, Linux, SQL, SIEM tools, and Intrusion Detection Systems",
+  },
+  {
+    title: "Google Data Analytics Professional Certificate",
+    issuer: "Coursera",
+    date: "June 2025",
+    credlyUrl: "https://www.credly.com/users/inga-maholwana.e3378d19",
+    description: "Data analysis using spreadsheets, SQL, Tableau, and R programming",
+  },
+  {
     title: "CompTIA Data+",
     issuer: "CompTIA",
     date: "2024",
-    credlyUrl: "https://www.credly.com/badges/your-badge-id",
+    credlyUrl: "https://www.credly.com/users/inga-maholwana",
     pdfUrl: "/documents/CompTIA_Data_ce_certificate.pdf",
     description: "Data analysis, visualization, and statistical fundamentals",
   },
@@ -17,6 +31,20 @@ const certifications = [
     date: "2025",
     pdfUrl: "/documents/FNB_App_Academy_Fullstack_Certificate.pdf",
     description: "Comprehensive fullstack software development certification",
+  },
+  {
+    title: "IBM Cybersecurity Fundamentals",
+    issuer: "IBM SkillsBuild",
+    date: "August 2024",
+    credlyUrl: "https://www.credly.com/users/inga-maholwana",
+    description: "Cybersecurity concepts, threat detection, cryptography, and security strategies",
+  },
+  {
+    title: "Getting Started with Artificial Intelligence",
+    issuer: "IBM SkillsBuild",
+    date: "October 2024",
+    credlyUrl: "https://www.credly.com/users/inga-maholwana",
+    description: "Foundational AI concepts, generative AI, and prompt engineering",
   },
 ];
 
@@ -85,31 +113,34 @@ const Certifications = () => {
 
       <Card className="p-6 card-shadow bg-gradient-card border-primary/20">
         <div className="flex items-start gap-4">
-          <Award className="h-6 w-6 text-primary mt-1" />
-          <div>
-            <h3 className="text-lg font-semibold mb-2 text-primary">
-              How to Add Your Certificates
+          <FileText className="h-6 w-6 text-primary mt-1" />
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-3 text-primary">
+              Complete Credly Transcripts
             </h3>
-            <ul className="space-y-2 text-sm text-foreground/80">
-              <li className="flex items-start gap-2">
-                <span className="text-primary">1.</span>
-                <span>
-                  Upload your PDF certificates and update the <code className="text-code-keyword">pdfUrl</code> fields
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary">2.</span>
-                <span>
-                  Add your Credly badge URLs by copying them from your Credly profile
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary">3.</span>
-                <span>
-                  Update the certification details in <code className="text-code-function">src/pages/Certifications.tsx</code>
-                </span>
-              </li>
-            </ul>
+            <p className="text-foreground/80 mb-4 text-sm">
+              View my full academic transcripts including all certifications, skill badges, and professional credentials from Credly.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a href="/documents/Credly_Transcript_1.pdf" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" variant="outline" className="gap-2">
+                  <Download className="h-4 w-4" />
+                  Transcript 1
+                </Button>
+              </a>
+              <a href="/documents/Credly_Transcript_2.pdf" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" variant="outline" className="gap-2">
+                  <Download className="h-4 w-4" />
+                  Transcript 2
+                </Button>
+              </a>
+              <a href="https://www.credly.com/users/inga-maholwana" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="gap-2">
+                  <ExternalLink className="h-4 w-4" />
+                  View Credly Profile
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </Card>

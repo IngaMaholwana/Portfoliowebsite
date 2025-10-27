@@ -33,7 +33,7 @@ const contactLinks = [
   },
   {
     name: 'Figma',
-    href: 'https://www.figma.com/@ingamaholwana',
+    href: 'https://www.figma.com/@inga45',
     icon: Figma,
   },
 ];

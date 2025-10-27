@@ -1,87 +1,53 @@
-import { Card } from "@/components/ui/card";
-
-const skills = [
-  { category: "Languages", items: ["JavaScript", "TypeScript", "Python", "Ruby", "Java"] },
-  { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "HTML/CSS"] },
-  { category: "Backend", items: ["Ruby on Rails", "Node.js", "Express", "REST APIs"] },
-  { category: "Tools", items: ["Git", "Docker", "VS Code", "Linux"] },
-];
+import MarkdownHeader from '@/components/MarkdownHeader';
+import LineBreak from '@/components/LineBreak';
+import Section from '@/components/Section';
+import Text from '@/components/Text';
+import MarkdownButton from '@/components/MarkdownButton';
+import Comment from '@/components/Comment';
+import TabLink from '@/components/TabLink';
 
 const About = () => {
   return (
-    <div className="space-y-8">
-      <div>
-        <p className="text-muted-foreground font-mono text-sm mb-4">
-          <span className="text-code-comment">// About me</span>
-        </p>
-        <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
-          Background Information
-        </h1>
-      </div>
+    <div>
+      <Section>
+        <MarkdownHeader headingLevel={1} text="About" className="text-3xl md:text-5xl" />
+        <LineBreak />
+        <Text>Hi! My name is Inga Maholwana. I am a full stack software engineer and Wethink alumni</Text>
+        <Text>Originally on a path in law, I pivoted to software development after discovering a deep interest in coding in 2019. 
+          I am a dedicated builder and lifelong learner, constantly honing my skills. 
+          I have a strong grasp of application architecture and specialize in implementing a clear vision from concept to a polished, functional product. 
+          For some examples of recent work, see <TabLink to="/portfolio" className="font-bold text-code-function hover:underline">Portfolio.js</TabLink>.
+        </Text>
+        <Text>For information on how to reach out, see <TabLink to="/contact" className="font-bold text-code-function hover:underline">Contact.md</TabLink>.</Text>
+      </Section>
 
-      <div className="space-y-6">
-        <Card className="p-6 card-shadow bg-gradient-card">
-          <h2 className="text-2xl font-semibold mb-4 text-primary">Who I Am</h2>
-          <div className="space-y-4 text-foreground/90">
-            <p>
-              I'm a passionate Full Stack Software Engineer based in South Africa with a
-              strong foundation in both frontend and backend technologies. My journey in
-              software development has been driven by curiosity and a desire to create
-              meaningful solutions.
-            </p>
-            <p>
-              With experience across multiple programming languages and frameworks, I enjoy
-              tackling complex problems and building scalable applications that make a
-              difference.
-            </p>
-          </div>
-        </Card>
+      <Section>
+        <MarkdownButton as="a" href="#" target="_blank" rel="noreferrer">
+          [Download Resume]
+        </MarkdownButton>
+      </Section>
 
-        <Card className="p-6 card-shadow bg-gradient-card">
-          <h2 className="text-2xl font-semibold mb-6 text-primary">Skills & Technologies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map((skill) => (
-              <div key={skill.category}>
-                <h3 className="text-lg font-semibold mb-3 text-code-function">
-                  {skill.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {skill.items.map((item) => (
-                    <span
-                      key={item}
-                      className="px-3 py-1 bg-secondary rounded text-sm text-foreground border border-border"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Card>
-
-        <Card className="p-6 card-shadow bg-gradient-card">
-          <h2 className="text-2xl font-semibold mb-4 text-primary">What I Do</h2>
-          <ul className="space-y-3 text-foreground/90">
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">▹</span>
-              <span>Build responsive and interactive web applications</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">▹</span>
-              <span>Design and implement RESTful APIs</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">▹</span>
-              <span>Work with databases and cloud services</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-1">▹</span>
-              <span>Collaborate with teams to deliver quality software</span>
-            </li>
-          </ul>
-        </Card>
-      </div>
+      <Section>
+        <MarkdownHeader headingLevel={2} text="Technologies" className="text-xl md:text-3xl" />
+        <LineBreak />
+        <Comment>
+          While these are some of the languages I am the most comfortable with, I am constantly looking to expand my toolkit and am open to working with and learning new skills!
+        </Comment>
+        <Text>
+          <span className="font-bold text-primary">Languages and Frameworks:</span> Ruby, Laravel, Prisma, Drizzle, Ruby on Rails, 
+          Python, Java, GraphQL, R, SQL, React, C#, C++, JavaScript, HTML, CSS, TypeScript, Node.js, Express.js, Next.js, Tailwind CSS, Bootstrap
+        </Text>
+        <Text>
+          <span className="font-bold text-primary">Databases:</span> PostgreSQL, MySQL, MongoDB, SQLite, Supabase
+        </Text>
+        <Text>
+          <span className="font-bold text-primary">Hosting platforms:</span> AWS, Azure, Google cloud platform, Coolify, Railway, Supabase, Firebase
+        </Text>
+        <Text>
+          <span className="font-bold text-primary">Miscellaneous:</span> Git, Webpack, Object-Oriented Programming and Design, Test-Driven Development, 
+          Data Structures and Algorithms, Full Stack Web Development, REST APIs, Amazon S3, Azure, Docker, Figma, Agile Methodologies
+        </Text>
+      </Section>
     </div>
   );
 };

@@ -1,85 +1,53 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ChevronRight } from "lucide-react";
+import Section from '@/components/Section';
+import Text from '@/components/Text';
+import LineBreak from '@/components/LineBreak';
+import TabLink from '@/components/TabLink';
+import Link from '@/components/Link';
 
 const Home = () => {
   return (
-    <div className="min-h-[80vh] flex items-center">
-      <div className="space-y-8 max-w-3xl">
-        <div className="space-y-4">
-          <p className="text-muted-foreground font-mono text-sm">
-            <span className="text-code-comment">// Welcome to my portfolio</span>
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold">
-            <span className="text-foreground">Bhotani mawethu. </span>
-            <span className="text-gradient">I am Inga!</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
-            A Full Stack Software Engineer from{" "}
-            <span className="text-primary font-semibold">South Africa 🇿🇦</span>
-          </p>
-        </div>
+    <div>
+      <Section>
+        <h1 className="text-5xl mb-3">
+          Bhotani mawethu. I am <span className="text-primary">Inga</span>!
+        </h1>
+        <h2 className='text-3xl'>
+          A Full Stack Software Engineer from South Africa 🇿🇦 
+          <span className="animate-blink ml-1">|</span>
+        </h2>
+        <LineBreak />
+      </Section>
 
-        <div className="space-y-4">
-          <p className="text-lg text-foreground/90">
-            Experienced using <span className="text-code-keyword">Ruby</span>,{" "}
-            <span className="text-code-function">Ruby on Rails</span>,{" "}
-            <span className="text-code-variable">Python</span>,{" "}
-            <span className="text-code-string">Java</span>,{" "}
-            <span className="text-code-keyword">JavaScript</span>,{" "}
-            <span className="text-primary">React</span>, and more!
-          </p>
-          <p className="text-muted-foreground">
-            This website, inspired by VS Code, is an interactive overview of who I am
-            and some of the things that I've built. I encourage visitors to click around
-            and explore (the sidebar and tabs are fully functioning).
-          </p>
+      <Section>
+        <Text>
+          Welcome to my workspace. This portfolio is a hands-on experience modeled 
+          after <Link targetBlank href="https://code.visualstudio.com/">VS Code</Link>—the 
+          tabs and sidebar are fully functional with easter eggs sprinkled in 🎇🎆 🐣 🎇🎆.
+        </Text>
+        <Text>
+          For more information on my background and previous work, check out some of the helpful links below! 
+          Use them to navigate my work as a Full Stack Engineer. You'll find 
+          projects showcasing my skills and experience.
+        </Text>
+      </Section>
+      
+      <Section className="space-y-2">
+        <h3 className="text-2xl font-bold mb-3">
+          Helpful Links
+        </h3>
+        <div>
+          <TabLink to="/about" className="text-primary font-normal hover:underline">About</TabLink>
+          <span className="ml-5">~/background_information</span>
         </div>
-
-        <div className="flex flex-wrap gap-4">
-          <Link to="/portfolio">
-            <Button size="lg" className="group">
-              View My Work
-              <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
-          <Link to="/certifications">
-            <Button size="lg" variant="outline">
-              View Certifications
-            </Button>
-          </Link>
-          <Link to="/contact">
-            <Button size="lg" variant="secondary">
-              Get In Touch
-            </Button>
-          </Link>
+        <div>
+          <TabLink to="/portfolio" className="text-primary font-normal hover:underline">Portfolio</TabLink>
+          <span className="ml-5">~/prior_work</span>
         </div>
-
-        <div className="flex gap-4 pt-4">
-          <a
-            href="https://github.com/ingamaholwana"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <Github className="h-6 w-6" />
-          </a>
-          <a
-            href="https://linkedin.com/in/ingamaholwana"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <Linkedin className="h-6 w-6" />
-          </a>
-          <a
-            href="mailto:inga@example.com"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <Mail className="h-6 w-6" />
-          </a>
+        <div>
+          <TabLink to="/contact" className="text-primary font-normal hover:underline">Contact</TabLink>
+          <span className="ml-5">~/lets_chat</span>
         </div>
-      </div>
+      </Section>
     </div>
   );
 };

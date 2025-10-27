@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, User, Briefcase, Award, Mail, Menu, X, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import JSConfetti from 'js-confetti';
 
 const navItems = [
   { path: "/", label: "Home.tsx", icon: Home },
@@ -14,6 +15,28 @@ const navItems = [
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  // Easter egg: Ctrl+Shift+K for fireworks!
+  useEffect(() => {
+    const keyboardShortcuts = (e: KeyboardEvent) => {
+      if (e.key === 'b' && e.ctrlKey) {
+        e.preventDefault();
+        setSidebarOpen(!sidebarOpen);
+      }
+
+      if (e.key === 'k' && e.ctrlKey && e.shiftKey) {
+        e.preventDefault();
+        const jsConfetti = new JSConfetti();
+        jsConfetti.addConfetti({ 
+          confettiColors: ['hsl(var(--primary))', 'hsl(var(--code-function))', 'hsl(var(--code-keyword))', 'hsl(var(--code-string))', 'hsl(var(--code-variable))'] 
+        });
+      }
+    };
+
+    window.addEventListener('keydown', keyboardShortcuts);
+
+    return () => window.removeEventListener('keydown', keyboardShortcuts);
+  }, [sidebarOpen]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

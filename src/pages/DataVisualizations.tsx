@@ -61,6 +61,29 @@ const excelProjects = [
   }
 ];
 
+const pythonProjects = [
+  {
+    title: "Introduction to Matplotlib and Line Plots",
+    file: "/data/Introduction-to-Matplotlib-and-Line-Plots.ipynb",
+    description: "Comprehensive introduction to data visualization with Matplotlib, covering line plots and immigration data analysis"
+  },
+  {
+    title: "Area Plots, Histograms, and Bar Charts",
+    file: "/data/Area-Plots-Histograms-and-Bar-Charts.ipynb",
+    description: "Advanced visualization techniques including area plots, histograms, and bar charts using Matplotlib"
+  },
+  {
+    title: "Waffle Charts, Word Clouds, and Regression Plots",
+    file: "/data/Waffle-Charts-Word-Clouds-and-Regression-Plots.ipynb",
+    description: "Creative visualizations with waffle charts, word clouds, and regression analysis using Seaborn"
+  },
+  {
+    title: "Creating Maps and Visualizing Geospatial Data",
+    file: "/data/Creating-maps-visualizing-geospat.ipynb",
+    description: "Interactive geospatial data visualization and mapping with Folium library"
+  }
+];
+
 const DataVisualizations = () => {
   return (
     <div>
@@ -127,6 +150,36 @@ const DataVisualizations = () => {
                 <a href={project.file} download className="flex items-center justify-center gap-2">
                   <Download className="h-4 w-4" />
                   Download File
+                </a>
+              </Button>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="mt-16">
+        <MarkdownHeader headingLevel={2} text="Python Data Analysis Projects" className="text-2xl md:text-4xl" />
+        <LineBreak />
+        <Text>
+          Jupyter notebooks demonstrating data visualization techniques with Python libraries including Matplotlib, Seaborn, and Folium.
+        </Text>
+      </Section>
+
+      <Section className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {pythonProjects.map((project, index) => (
+            <div key={index} className="border border-border rounded-lg p-6 bg-card shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-semibold text-primary mb-2">{project.title}</h3>
+              <p className="text-foreground/80 text-sm mb-4">{project.description}</p>
+              <Button 
+                variant="outline" 
+                size="sm"
+                asChild
+                className="w-full"
+              >
+                <a href={project.file} download className="flex items-center justify-center gap-2">
+                  <Download className="h-4 w-4" />
+                  Download Notebook
                 </a>
               </Button>
             </div>

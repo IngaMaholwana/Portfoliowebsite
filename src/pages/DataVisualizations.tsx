@@ -13,6 +13,16 @@ const tableauVizualizations = [
     title: "Pollution Data (2000-2011)",
     url: "https://public.tableau.com/views/Pollutiondataforyears2000-2011/Sheet1",
     description: "Environmental pollution trends over a decade"
+  },
+  {
+    title: "Data Analysis Project",
+    url: "https://public.tableau.com/shared/RMHQTP87S",
+    description: "Interactive data visualization and analysis"
+  },
+  {
+    title: "TikTok Project 2025",
+    url: "https://public.tableau.com/views/Tiktokproject2025/Story1",
+    description: "TikTok data analysis and storytelling dashboard"
   }
 ];
 

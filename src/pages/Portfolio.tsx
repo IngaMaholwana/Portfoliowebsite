@@ -4,32 +4,39 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with React and Ruby on Rails",
-    tags: ["React", "Ruby on Rails", "PostgreSQL"],
-    github: "#",
-    demo: "#",
+    title: "Ugrandjojo",
+    description: "VS Code extension developed for Microsoft South Africa AI for Good hackathon that uses AI to help users deal with imposter syndrome. Features 4 sprites with different personalities, can read code and provide feedback.",
+    tags: ["TypeScript", "JavaScript", "Azure", "OpenAI API"],
+    github: "https://github.com/IngaMaholwana/ugrandjojo",
+    demo: undefined,
   },
   {
-    title: "Task Management App",
-    description: "Collaborative task management tool with real-time updates",
-    tags: ["TypeScript", "Node.js", "MongoDB"],
-    github: "#",
-    demo: "#",
+    title: "BattleShip",
+    description: "Event-driven Battleship game with turn-based gameplay, dynamic user interface and clear win condition.",
+    tags: ["Ruby on Rails", "React", "JavaScript"],
+    github: "https://github.com/IngaMaholwana/BattleShip",
+    demo: "https://ingamaholwana.github.io/BattleShip/",
   },
   {
-    title: "Portfolio Website",
-    description: "Interactive developer portfolio with VS Code theme",
-    tags: ["React", "Tailwind CSS", "Vite"],
-    github: "#",
-    demo: "#",
+    title: "Cyclic Case Study",
+    description: "Dashboard developed in RStudio (Posit Cloud) from bike shop rental data to help gain more customers from casual users.",
+    tags: ["R", "CSV", "Data Analysis"],
+    github: "https://github.com/IngaMaholwana/Cyclic-data-case-study",
+    demo: "https://posit.cloud/content/10491857",
   },
   {
-    title: "API Gateway",
-    description: "Microservices API gateway with authentication and rate limiting",
-    tags: ["Python", "FastAPI", "Redis"],
-    github: "#",
-    demo: "#",
+    title: "FastAPI Authentication Service",
+    description: "Full-stack authentication and authorization service using FastAPI with JWT-based authentication, secure password hashing and storage for modern web applications.",
+    tags: ["Python", "FastAPI", "JWT", "PostgreSQL"],
+    github: "https://github.com/IngaMaholwana/fastapi-authentication-service",
+    demo: undefined,
+  },
+  {
+    title: "FullChessRuby",
+    description: "Fully developed command-line chess game using Ruby with move selection/viewing and save/load game capabilities.",
+    tags: ["Ruby", "CLI", "Game Development"],
+    github: "https://github.com/IngaMaholwana/FullChessRuby",
+    demo: undefined,
   },
 ];
 
@@ -41,11 +48,13 @@ const Portfolio = () => {
           <span className="text-code-comment">// My work</span>
         </p>
         <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
-          Prior Work
+          Personal Projects
         </h1>
         <p className="text-foreground/80 max-w-2xl">
-          Here are some of the projects I've worked on. Each project represents a unique
-          challenge and learning opportunity in my development journey.
+          Below is a selection of some recent and larger projects that I have worked on. For more detail on everything that I have done, as well as what I am currently working on, check out my{" "}
+          <a href="https://github.com/IngaMaholwana" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+            GitHub
+          </a>.
         </p>
       </div>
 
@@ -76,12 +85,14 @@ const Portfolio = () => {
                   Code
                 </Button>
               </a>
-              <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  Demo
-                </Button>
-              </a>
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" className="gap-2">
+                    <ExternalLink className="h-4 w-4" />
+                    Demo
+                  </Button>
+                </a>
+              )}
             </div>
           </Card>
         ))}

@@ -26,7 +26,7 @@ const projects = [
   },
   {
     title: "FastAPI Authentication Service",
-    description: "Full-stack authentication and authorization service using FastAPI with JWT-based authentication, secure password hashing and storage for modern web applications.",
+    description: "Full-stack authentication and authorisation service using FastAPI with JWT-based authentication, secure password hashing and storage for modern web applications.",
     tags: ["Python", "FastAPI", "JWT", "PostgreSQL"],
     github: "https://github.com/IngaMaholwana/fastapi-authentication-service",
     demo: undefined,

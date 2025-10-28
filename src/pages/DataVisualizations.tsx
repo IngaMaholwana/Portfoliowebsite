@@ -19,7 +19,7 @@ const tableauVizualizations = [
   {
     title: "Data Analysis Project",
     url: "https://public.tableau.com/shared/RMHQTP87S",
-    description: "Interactive data visualization and analysis"
+    description: "Interactive data visualisation and analysis"
   },
   {
     title: "TikTok Project 2025",
@@ -37,10 +37,10 @@ const excelProjects = [
   {
     title: "Car Sales Dashboard (Kaggle)",
     file: "/data/Car_Sales_Kaggle_Dashboard.xlsx",
-    description: "Interactive dashboard analyzing car sales data with trends and insights"
+    description: "Interactive dashboard analysing car sales data with trends and insights"
   },
   {
-    title: "Car Sales Visualization",
+    title: "Car Sales Visualisation",
     file: "/data/Car_Sales_Visualisation.xlsx",
     description: "Visual analysis of car sales performance metrics"
   },
@@ -57,7 +57,7 @@ const excelProjects = [
   {
     title: "Customer Demographics & Sales Analysis",
     file: "/data/Customer_demographics_and_sales.csv",
-    description: "Comprehensive customer behavior and sales data analysis"
+    description: "Comprehensive customer behaviour and sales data analysis"
   }
 ];
 
@@ -65,22 +65,22 @@ const pythonProjects = [
   {
     title: "Introduction to Matplotlib and Line Plots",
     file: "/data/Introduction-to-Matplotlib-and-Line-Plots.ipynb",
-    description: "Comprehensive introduction to data visualization with Matplotlib, covering line plots and immigration data analysis"
+    description: "Comprehensive introduction to data visualisation with Matplotlib, covering line plots and immigration data analysis"
   },
   {
     title: "Area Plots, Histograms, and Bar Charts",
     file: "/data/Area-Plots-Histograms-and-Bar-Charts.ipynb",
-    description: "Advanced visualization techniques including area plots, histograms, and bar charts using Matplotlib"
+    description: "Advanced visualisation techniques including area plots, histograms, and bar charts using Matplotlib"
   },
   {
     title: "Waffle Charts, Word Clouds, and Regression Plots",
     file: "/data/Waffle-Charts-Word-Clouds-and-Regression-Plots.ipynb",
-    description: "Creative visualizations with waffle charts, word clouds, and regression analysis using Seaborn"
+    description: "Creative visualisations with waffle charts, word clouds, and regression analysis using Seaborn"
   },
   {
-    title: "Creating Maps and Visualizing Geospatial Data",
+    title: "Creating Maps and Visualising Geospatial Data",
     file: "/data/Creating-maps-visualizing-geospat.ipynb",
-    description: "Interactive geospatial data visualization and mapping with Folium library"
+    description: "Interactive geospatial data visualisation and mapping with Folium library"
   }
 ];
 
@@ -88,10 +88,10 @@ const DataVisualizations = () => {
   return (
     <div>
       <Section>
-        <MarkdownHeader headingLevel={1} text="Data Visualizations" className="text-3xl md:text-5xl" />
+        <MarkdownHeader headingLevel={1} text="Data Visualisations" className="text-3xl md:text-5xl" />
         <LineBreak />
         <Text>
-          Interactive dashboards and data visualizations created with Tableau Public and R Studio.
+          Interactive dashboards and data visualisations created with Tableau Public and R Studio.
         </Text>
       </Section>
 
@@ -104,8 +104,6 @@ const DataVisualizations = () => {
               <iframe
                 src={`${viz.url}?:showVizHome=no&:embed=true&:toolbar=yes`}
                 className="w-full h-[600px] md:h-[700px]"
-                frameBorder="0"
-                allowFullScreen
                 title={viz.title}
               />
             </div>
@@ -115,7 +113,7 @@ const DataVisualizations = () => {
 
       <Section>
         <Text className="text-sm text-muted-foreground">
-          View more visualizations on my{' '}
+          View more visualisations on my{' '}
           <a 
             href="https://public.tableau.com/app/profile/inga.maholwana/vizzes" 
             target="_blank" 
@@ -161,7 +159,7 @@ const DataVisualizations = () => {
         <MarkdownHeader headingLevel={2} text="Python Data Analysis Projects" className="text-2xl md:text-4xl" />
         <LineBreak />
         <Text>
-          Jupyter notebooks demonstrating data visualization techniques with Python libraries including Matplotlib, Seaborn, and Folium.
+          Jupyter notebooks demonstrating data visualisation techniques with Python libraries including Matplotlib, Seaborn, and Folium.
         </Text>
       </Section>
 

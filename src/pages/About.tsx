@@ -15,7 +15,7 @@ const About = () => {
         <Text>Hi! My name is Inga Maholwana. I am a full stack software engineer and Wethink alumni</Text>
         <Text>Originally on a path in law, I pivoted to software development after discovering a deep interest in coding in 2019. 
           I am a dedicated builder and lifelong learner, constantly honing my skills. 
-          I have a strong grasp of application architecture and specialize in implementing a clear vision from concept to a polished, functional product. 
+          I have a strong grasp of application architecture and specialise in implementing a clear vision from concept to a polished, functional product. 
           For some examples of recent work, see <TabLink to="/portfolio" className="font-bold text-code-function hover:underline">Portfolio.js</TabLink>.
         </Text>
         <Text>For information on how to reach out, see <TabLink to="/contact" className="font-bold text-code-function hover:underline">Contact.md</TabLink>.</Text>

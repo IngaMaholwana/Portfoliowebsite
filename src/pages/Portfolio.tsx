@@ -4,6 +4,13 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Isixhosa Inyanga Zonyaka (Ikhalenda)",
+    description: "A React + TypeScript calendar application with Xhosa translations and event management. Features monthly calendar grid view, event creation/editing, Google Calendar OAuth integration, and Supabase-backed persistence with reusable UI components.",
+    tags: ["React", "TypeScript", "Vite", "Google Calendar API", "Supabase"],
+    github: "https://github.com/IngaMaholwana/isixhosa-inyanga-zonyaka-ikhalenda",
+    demo: "https://ingamaholwana.github.io/isixhosa-inyanga-zonyaka-ikhalenda",
+  },
+  {
     title: "Ugrandjojo",
     description: "VS Code extension developed for Microsoft South Africa AI for Good hackathon that uses AI to help users deal with imposter syndrome. Features 4 sprites with different personalities, can read code and provide feedback.",
     tags: ["TypeScript", "JavaScript", "Azure", "OpenAI API"],

@@ -3,8 +3,13 @@ import Text from '@/components/Text';
 import LineBreak from '@/components/LineBreak';
 import TabLink from '@/components/TabLink';
 import Link from '@/components/Link';
+import { navItems } from '@/utils/directory';
 
 const Home = () => {
+  const aboutTab = navItems.find(item => item.path === '/about');
+  const portfolioTab = navItems.find(item => item.path === '/portfolio');
+  const contactTab = navItems.find(item => item.path === '/contact');
+
   return (
     <div>
       <Section>
@@ -36,15 +41,15 @@ const Home = () => {
           Helpful Links
         </h3>
         <div>
-          <TabLink to="/about" className="text-primary font-normal hover:underline">About</TabLink>
+          <TabLink tab={aboutTab} className="text-primary font-normal hover:underline">About</TabLink>
           <span className="ml-5">~/background_information</span>
         </div>
         <div>
-          <TabLink to="/portfolio" className="text-primary font-normal hover:underline">Portfolio</TabLink>
+          <TabLink tab={portfolioTab} className="text-primary font-normal hover:underline">Portfolio</TabLink>
           <span className="ml-5">~/prior_work</span>
         </div>
         <div>
-          <TabLink to="/contact" className="text-primary font-normal hover:underline">Contact</TabLink>
+          <TabLink tab={contactTab} className="text-primary font-normal hover:underline">Contact</TabLink>
           <span className="ml-5">~/lets_chat</span>
         </div>
       </Section>

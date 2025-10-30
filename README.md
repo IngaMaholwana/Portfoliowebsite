@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+# Portfolio Website
 
-## Project info
+A modern, responsive personal portfolio built with Vite, React, and TypeScript. This repository contains the source code for a portfolio site implemented using shadcn-ui and Tailwind CSS, optimized for fast development and deployment.
 
-**URL**: https://lovable.dev/projects/3c227d4e-21e6-4d0c-8bdf-f7af26b8a0fd
+Live demo: https://lovable.dev/projects/3c227d4e-21e6-4d0c-8bdf-f7af26b8a0fd
 
-## How can I edit this code?
+## Key Features
 
-There are several ways of editing your application.
+- Clean, component-driven architecture using React + TypeScript
+- UI built with shadcn-ui and Tailwind CSS for rapid styling
+- Responsive design optimized for desktop and mobile
+- Modular file and tab components for reusable UI elements
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3c227d4e-21e6-4d0c-8bdf-f7af26b8a0fd) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## Technology Stack
 
 - Vite
-- TypeScript
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- shadcn-ui
 
-## How can I deploy this project?
+## Quick Start
 
-Simply open [Lovable](https://lovable.dev/projects/3c227d4e-21e6-4d0c-8bdf-f7af26b8a0fd) and click on Share -> Publish.
+Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js (LTS recommended)
+- npm
 
-Yes, you can!
+Local development
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Install dependencies
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+   npm install
+
+2. Start the development server
+
+   npm run dev
+
+3. Build for production
+
+   npm run build
+
+4. Preview the production build locally
+
+   npm run preview
+
+## Project Structure (high level)
+
+- src/
+  - components/      — Reusable UI components and layout
+  - pages/           — Route pages (Home, About, Portfolio, Blog, etc.)
+  - contexts/        — React context providers
+  - hooks/           — Custom React hooks
+  - ui/              — shadcn-ui wrapper components
+  - utils/           — Utility helpers
+
+## Deployment
+
+This project can be deployed to any static-hosting platform that supports Vite builds (Netlify, Vercel, GitHub Pages, etc.).
+
+If you are using Lovable, publish directly from the project dashboard (Share -> Publish).
+
+## Contributing
+
+Contributions are welcome. To contribute:
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request with a clear description of changes
+
+## Troubleshooting
+
+- If you encounter dependency or build issues, ensure your Node.js version is up-to-date and reinstall dependencies (npm ci).
+
+## Contact
+
+GitHub: https://github.com/IngaMaholwana
+
+For additional information or to report issues, please open an issue on the repository.
+
+## License
+
+See the repository for license details.

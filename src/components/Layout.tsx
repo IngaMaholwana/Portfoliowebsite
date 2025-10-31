@@ -128,7 +128,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {/* Status Bar */}
       <footer className="h-6 bg-primary text-primary-foreground text-xs flex items-center justify-between px-4">
-        <span>Full Stack Software Engineer</span>
+        <span>Full Stack Software Engineer INGA MAHOLWANA</span>
         <span>UTF-8 | TypeScript JSX</span>
       </footer>
     </div>

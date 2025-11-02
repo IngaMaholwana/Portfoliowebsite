@@ -31,32 +31,32 @@ const tableauVizualizations = [
 const excelProjects = [
   {
     title: "Personal Monthly Expenditure Analysis",
-    file: "/data/Personal_Monthly_Expenditure.csv",
+    file: "data/Personal_Monthly_Expenditure.csv",
     description: "Comprehensive analysis of monthly expenses across multiple categories with statistical summaries"
   },
   {
     title: "Car Sales Dashboard (Kaggle)",
-    file: "/data/Car_Sales_Kaggle_Dashboard.xlsx",
+    file: "data/Car_Sales_Kaggle_Dashboard.xlsx",
     description: "Interactive dashboard analysing car sales data with trends and insights"
   },
   {
     title: "Car Sales Visualisation",
-    file: "/data/Car_Sales_Visualisation.xlsx",
+    file: "data/Car_Sales_Visualisation.xlsx",
     description: "Visual analysis of car sales performance metrics"
   },
   {
     title: "Montgomery Fleet Equipment Inventory (Part 1)",
-    file: "/data/Montgomery_Fleet_Equipment_Inventory_Part1.xlsx",
+    file: "data/Montgomery_Fleet_Equipment_Inventory_Part1.xlsx",
     description: "Analysis of fleet equipment inventory by department"
   },
   {
     title: "Montgomery Fleet Equipment Inventory (Part 2)",
-    file: "/data/Montgomery_Fleet_Equipment_Inventory_Part2.xlsx",
+    file: "data/Montgomery_Fleet_Equipment_Inventory_Part2.xlsx",
     description: "Continued analysis of fleet equipment inventory data"
   },
   {
     title: "Customer Demographics & Sales Analysis",
-    file: "/data/Customer_demographics_and_sales.csv",
+    file: "data/Customer_demographics_and_sales.csv",
     description: "Comprehensive customer behaviour and sales data analysis"
   }
 ];
@@ -64,22 +64,22 @@ const excelProjects = [
 const pythonProjects = [
   {
     title: "Introduction to Matplotlib and Line Plots",
-    file: "/data/Introduction-to-Matplotlib-and-Line-Plots.ipynb",
+    file: "data/Introduction-to-Matplotlib-and-Line-Plots.ipynb",
     description: "Comprehensive introduction to data visualisation with Matplotlib, covering line plots and immigration data analysis"
   },
   {
     title: "Area Plots, Histograms, and Bar Charts",
-    file: "/data/Area-Plots-Histograms-and-Bar-Charts.ipynb",
+    file: "data/Area-Plots-Histograms-and-Bar-Charts.ipynb",
     description: "Advanced visualisation techniques including area plots, histograms, and bar charts using Matplotlib"
   },
   {
     title: "Waffle Charts, Word Clouds, and Regression Plots",
-    file: "/data/Waffle-Charts-Word-Clouds-and-Regression-Plots.ipynb",
+    file: "data/Waffle-Charts-Word-Clouds-and-Regression-Plots.ipynb",
     description: "Creative visualisations with waffle charts, word clouds, and regression analysis using Seaborn"
   },
   {
     title: "Creating Maps and Visualising Geospatial Data",
-    file: "/data/Creating-maps-visualizing-geospat.ipynb",
+    file: "data/Creating-maps-visualizing-geospat.ipynb",
     description: "Interactive geospatial data visualisation and mapping with Folium library"
   }
 ];
@@ -145,7 +145,7 @@ const DataVisualizations = () => {
                 asChild
                 className="w-full"
               >
-                <a href={project.file} download className="flex items-center justify-center gap-2">
+                <a href={`${import.meta.env.BASE_URL}${project.file}`} download className="flex items-center justify-center gap-2">
                   <Download className="h-4 w-4" />
                   Download File
                 </a>
@@ -175,7 +175,7 @@ const DataVisualizations = () => {
                 asChild
                 className="w-full"
               >
-                <a href={project.file} download className="flex items-center justify-center gap-2">
+                <a href={`${import.meta.env.BASE_URL}${project.file}`} download className="flex items-center justify-center gap-2">
                   <Download className="h-4 w-4" />
                   Download Notebook
                 </a>

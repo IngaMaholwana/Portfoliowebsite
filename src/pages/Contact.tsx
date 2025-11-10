@@ -3,7 +3,7 @@ import LineBreak from '@/components/LineBreak';
 import Section from '@/components/Section';
 import Text from '@/components/Text';
 import { Button } from '@/components/ui/button';
-import { Mail, Github, Linkedin, FileText, BarChart3, Figma } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, BarChart3, Figma, Youtube } from 'lucide-react';
 
 const contactLinks = [
   {
@@ -35,6 +35,11 @@ const contactLinks = [
     name: 'Figma',
     href: 'https://www.figma.com/@inga45',
     icon: Figma,
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@ingamaholwana2447',
+    icon: Youtube,
   },
 ];
 

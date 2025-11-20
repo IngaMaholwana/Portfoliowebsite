@@ -16,7 +16,8 @@ const About = () => {
         <MarkdownHeader headingLevel={1} text="About" className="text-3xl md:text-5xl" />
         <LineBreak />
         <Text>Hi! My name is Inga Maholwana. I am a full stack software engineer and Wethink alumni</Text>
-        <Text>Originally on a path in law, I pivoted to software development after discovering a deep interest in coding in 2019. 
+        <Text>Based in Cape Town the aka mother city started my in world experience in the Tech sector by being a data analyst associate in that role obtained my comptia Data plus certication worked with SAP environment, visuals with tablea and excel powerBI worked on python and SQL development cleaning data visualising it and so moved to being 
+          a software development intern in a small start here in Cape Town and all the skills I claim in my resume are being put to the test actively every single day being in a very small team when not working its very obvious so my time is being used effectively from building database management systems, Api development self hosting systems etc. 
           I am a dedicated builder and lifelong learner, constantly honing my skills. 
           I have a strong grasp of application architecture and specialise in implementing a clear vision from concept to a polished, functional product. 
           For some examples of recent work, see <TabLink tab={portfolioTab} className="font-bold text-code-function hover:underline">Portfolio.js</TabLink>.
@@ -34,7 +35,7 @@ const About = () => {
         <MarkdownHeader headingLevel={2} text="Technologies" className="text-xl md:text-3xl" />
         <LineBreak />
         <Comment>
-          While these are some of the languages I am the most comfortable with, I am constantly looking to expand my toolkit and am open to working with and learning new skills!
+          These are the the frameworks and programming languages that I use or have used to achieve my objectives. I am open to working with and learning new skills!
         </Comment>
         <Text>
           <span className="font-bold text-primary">Languages and Frameworks:</span> Ruby, Laravel, Prisma, Drizzle, Ruby on Rails, 

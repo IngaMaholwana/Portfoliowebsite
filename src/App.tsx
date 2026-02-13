@@ -26,7 +26,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/PORTFOLIOWEBSITE/">
+        <BrowserRouter>
           <TabProvider initialTabs={initialTabs}>
             <Routes>
               <Route path="/" element={<Layout><Home /></Layout>} />

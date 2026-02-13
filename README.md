@@ -1,8 +1,7 @@
 # Portfolio Website
 
-A modern, responsive personal portfolio built with Vite, React, and TypeScript. This repository contains the source code for a portfolio site implemented using shadcn-ui and Tailwind CSS, optimized for fast development and deployment.
 
-Live demo: https://lovable.dev/projects/3c227d4e-21e6-4d0c-8bdf-f7af26b8a0fd
+Live demo: https://ingamaholwana.github.io/PORTFOLIOWEBSITE/
 
 ## Key Features
 

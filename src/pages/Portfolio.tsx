@@ -11,6 +11,13 @@ const projects = [
     demo: "https://ingamaholwana.github.io/isixhosa-inyanga-zonyaka-ikhalenda",
   },
   {
+    title: "Sa-Schools",
+    description: "What data says about learner to teacher ratios in South African schools. Interactive mapcn built with react. Included is the numeric differences between high scools and primary schools, as well as the distribution of learner to teacher ratios across provinces.",
+    tags: ["Python","Selenium","Pandas","NumPy", "React", "Mapcn", "Geolocator"],
+    github: "https://github.com/IngaMaholwana/Sa-Schools",
+    demo: "https://ingamaholwana.github.io/Sa-Schools/",
+  },
+  {
     title: "Ugrandjojo",
     description: "VS Code extension developed for Microsoft South Africa AI for Good hackathon that uses AI to help users deal with imposter syndrome. Features 4 sprites with different personalities, can read code and provide feedback.",
     tags: ["TypeScript", "JavaScript", "Azure", "OpenAI API"],

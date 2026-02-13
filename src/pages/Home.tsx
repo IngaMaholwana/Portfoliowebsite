@@ -14,10 +14,10 @@ const Home = () => {
     <div>
       <Section>
         <h1 className="text-5xl mb-3">
-          Bhotani mawethu. I am <span className="text-primary">Inga</span>!
+          Bhotani. I am <span className="text-primary">Inga</span>!
         </h1>
         <h2 className='text-3xl'>
-          A Full Stack Software Engineer from South Africa 🇿🇦 
+          Full Stack Software Engineer | Cape Town, South Africa 🇿🇦
           <span className="animate-blink ml-1">|</span>
         </h2>
         <LineBreak />
@@ -25,14 +25,18 @@ const Home = () => {
 
       <Section>
         <Text>
-          Welcome to my workspace. This portfolio is a hands-on experience modeled 
+          Welcome to my workspace. I build scalable full-stack applications using modern technologies 
+          like TypeScript, React, Node.js, PostgreSQL, and cloud platforms. 
+          I specialize in backend architecture, API design, and deploying 
+          production-ready systems.
+          
+          This portfolio is a hands-on experience modeled 
           after <Link targetBlank href="https://code.visualstudio.com/">VS Code</Link>—the 
           tabs and sidebar are fully functional with easter eggs sprinkled in 🎇🎆 🐣 🎇🎆.
         </Text>
         <Text>
-          For more information on my background and previous work, check out some of the helpful links below! 
-          Use them to navigate my work as a Full Stack Engineer. You'll find 
-          projects showcasing my skills and experience.
+          Explore my work, technical background, and engineering philosophy
+          using the navigation below.
         </Text>
       </Section>
       
